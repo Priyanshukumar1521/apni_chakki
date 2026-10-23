@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orai ki aata chakki se sampark karein aur enquiry bhejein.">
+  <title>Contact & Enquiry | Apni Aata Chakki</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="index.html">🌾 Apni <span>Chakki</span></a>
+    <button class="menu-toggle" aria-label="Menu kholen" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a><a href="products.html">Products</a>
+      <a href="services.html">Services</a><a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a class="btn btn-small" href="#enquiry-form">Enquiry Karein</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <span class="eyebrow">HUMSE SAMPARK KAREIN</span>
+      <h1>Aapki Enquiry, Hamara Jawab</h1>
+      <p>Pisai, aata ke rate aur product availability ke baare mein poochhein.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <div class="contact-info">
+        <span class="eyebrow">CONTACT DETAILS</span>
+        <h2>Chaliye, Baat Karte Hain</h2>
+        <p>Humse call ya WhatsApp ke madhyam se sampark karein.</p>
+
+        <div class="contact-item">
+          <span>📍</span>
+          <div><strong>Address</strong><p>Orai, Uttar Pradesh</p></div>
+        </div>
+        <div class="contact-item">
+          <span>📞</span>
+          <div><strong>Phone</strong><p id="contact-phone">8468082956</p></div>
+        </div>
+        <div class="contact-item">
+          <span>🕒</span>
+          <div><strong>Business Hours</strong><p>8 PM to 9 AM</p></div>
+        </div>
+
+        <a class="btn" data-call href="#">Call Now</a>
+        <a class="btn btn-whatsapp" data-whatsapp href="#">WhatsApp Karein</a>
+
+      </div>
+
+      <div class="form-panel" id="enquiry-form">
+        <h2>Enquiry Form</h2>
+        <p>Star (*) wale fields bharna zaroori hai.</p>
+
+        <form id="enquiryForm"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST">
+          <label for="name">Aapka Naam *</label>
+          <input id="name" name="name" type="text"
+            placeholder="Poora naam" autocomplete="name" required>
+
+          <label for="phone">Mobile Number *</label>
+          <input id="phone" name="phone" type="tel"
+            placeholder="10-digit mobile number"
+            inputmode="numeric" pattern="[6-9][0-9]{9}"
+            minlength="10" maxlength="10"
+            autocomplete="tel" required>
+
+          <label for="requirement">Requirement *</label>
+          <select id="requirement" name="requirement" required>
+            <option value="">Select karein</option>
+            <option>Gehu Pisai</option>
+            <option>Aata Purchase</option>
+            <option>Makka Aata</option>
+            <option>Bulk Order</option>
+            <option>Other Enquiry</option>
+          </select>
+
+          <label for="quantity">Quantity (optional)</label>
+          <input id="quantity" name="quantity" type="text"
+            placeholder="Jaise 20 kg">
+
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="4"
+            placeholder="Apni requirement likhein"></textarea>
+
+          <input type="hidden" name="_subject"
+            value="New Aata Chakki Website Enquiry">
+
+          <button class="btn btn-full" type="submit">
+            Enquiry Submit Karein
+          </button>
+
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <button class="text-link whatsapp-form" type="button">
+            WhatsApp par enquiry bhejein →
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="info-panel">
+        <h2>Hamari Shop Tak Pahunchein</h2>
+        <a class="text-link" data-maps href="#">Google Maps →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>
